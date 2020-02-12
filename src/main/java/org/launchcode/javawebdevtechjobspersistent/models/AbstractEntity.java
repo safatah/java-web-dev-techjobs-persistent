@@ -1,12 +1,20 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
+import com.fasterxml.jackson.annotation.JsonTypeId;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
+import javax.persistence.*;
 
-
+@MappedSuperclass
 public abstract class AbstractEntity {
-
+    @Id
+    @GeneratedValue
     private int id;
 
+    @NotNull(message = "Name is required")
+    @Size(min = 2, max = 250, message = "Name must be between 2-250 characters")
     private String name;
 
     public int getId() {
