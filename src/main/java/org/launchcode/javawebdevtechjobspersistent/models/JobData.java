@@ -1,5 +1,8 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
+import org.springframework.context.annotation.EnableLoadTimeWeaving;
+
+import javax.persistence.Entity;
 import java.util.ArrayList;
 
 // This is a change made in sandbox.

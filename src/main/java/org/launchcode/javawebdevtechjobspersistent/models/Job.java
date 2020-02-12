@@ -6,25 +6,25 @@ import javax.persistence.*;
 public class Job extends AbstractEntity {
 
     @ManyToOne
-    private String Employer;
+    private Employer employer;
     private String skills;
 
     public Job() {
     }
 
-    public Job(String anEmployer, String someSkills) {
+    public Job(Employer anEmployer, String someSkills) {
         super();
-        this.Employer = anEmployer;
+        this.employer = anEmployer;
         this.skills = someSkills;
     }
 
     // Getters and setters
-    public String getEmployer() {
-        return Employer;
+    public Employer getEmployer() {
+        return employer;
     }
 
-    public void setEmployer(String employer) {
-        this.Employer = employer;
+    public void setEmployer(Employer employer) {
+        this.employer = employer;
     }
 
     public String getSkills() {
